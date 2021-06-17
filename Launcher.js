@@ -12,15 +12,15 @@ class Launcher {
         World.add(world, this.launcher);
     }
     attach(body){
-        this.launcher.bodyA = bodyA
+        this.launcher.bodyA = body
     }
    
  fly(){
-     this.Launcher.bodyA = null;
+     this.launcher.bodyA = null;
  }
     display(){
         if(this.launcher.bodyA){
-        var pointA = this.launcher.bodyA.position;
+        var pointA = this.bodyA.position;
         var pointB = this.pointB;
         strokeWeight(4);
         line(pointA.x, pointA.y, pointB.x, pointB.y);
